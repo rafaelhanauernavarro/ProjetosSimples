@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Projeto 3 </title>
+
+	<style>
+
+		.inicio {background-image: url("https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"); width: 100%; height: 400px; border-radius: 15px 15px 0px 0px;}
+		li {display: inline-block; font-size: 120%; margin-left: 2%;
+			font-family: serif; color: white; margin-top: 1%;}
+
+
+
+			.colunas{margin-left: 4%; padding: 1%; font-size: 150%;}
+			.botao-colunas{float: right; width: 1%; height: 1%; padding: 1%; background-color: whitesmoke; border-style: none; margin: 1px;}
+		
+
+			.pisos {display:flex; margin-left: 18%; margin-bottom: 1%;}
+			.fim {border-radius:0px 0px 15px 15px; background-color: black; color: white;display: flex; height: 200px;}
+
+
+
+	</style>
+	
+<script>
+	function mudar1() {
+		return document.getElementById('colum1').style.display = 'none',
+		 document.getElementById('colum2').style.display = 'none',
+		 document.getElementById('colum3').style.display = 'none',
+		 document.getElementById('obj1').style.display = 'none',
+		 document.getElementById('principal1').style.display = 'none',
+		 document.getElementById('principal2').style.display = 'flex',
+		 document.getElementById('colum4').style.display = 'block',
+		 document.getElementById('colum5').style.display = 'block',
+		 document.getElementById('colum6').style.display = 'block',
+		 document.getElementById('obj2').style.display = 'block';
+
+	}
+		function mudar2() {
+		return document.getElementById('colum1').style.display = 'block',
+		 document.getElementById('colum2').style.display = 'block',
+		 document.getElementById('colum3').style.display = 'block',
+		 document.getElementById('obj1').style.display = 'block',
+		 document.getElementById('principal1').style.display = 'flex',
+		 document.getElementById('principal2').style.display = 'none',
+		 document.getElementById('colum4').style.display = 'none',
+		 document.getElementById('colum5').style.display = 'none',
+		 document.getElementById('colum6').style.display = 'none',
+		 document.getElementById('obj2').style.display = 'none';
+
+	}
+
+</script>
+</head>
+
+<body>
+<div class="inicio">
+<ol> 
+	<li style="margin-left: 2%; font-size: 140%; font-family: initial;"> BASIC/DEPT </li>
+	<li style="margin-left:10%;"> Work </li>
+	<li> ABOUT  </li>
+	<li> NEWS </li>
+	<li> THINKING </li>
+	<li> PLEDGE </li>
+	<li> CARREERS </li>
+	<li> CONTACT </li>
+	<li style="margin-left:20%; font-size: 140%;"> ... </li>
+</ol>
+ </div>
+
+ <div style="display: inline-block; width: 40%; margin-left: 5%;">
+<h2> BASIC/DEPT is a global branding and digital design agency building products, services and eCommerce experiences that turn cultural values into company value.</h2>
+
+<button style="background-color: white; color: black;
+ border-radius: 30px; padding-left: 2%; padding-right: 2%;"> See the work </button>
+ </div>
+
+ <h1 style="position: absolute; right: 10%; top: 50%; font-size: 400%;"> B/D </h1>
+
+<br>
+<div style="display:flex; margin-top: 2%;">
+<div style="margin-left: 5%;">
+	<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"
+	style="width:100%; height: 50%;">
+	<h3> PATAGONIA </h3>
+	<p> An ecommercer experience driven by patagonia´s brand mission </p>
+</div>
+
+<div style="margin-left: 5%;">
+	<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg" style="width:100%; height: 50%;">
+	<h3> Wilson </h3>
+	<p> A century-old sports brand finding its place in culture </p>
+</div>
+
+<div style="margin-left: 5%;">
+	<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"
+	style="width:100%; height: 50%;">
+	<h3> Google Store </h3>
+	<p> An ecommerce experience helping google bring its hardware to people across the globe </p>
+</div>
+</div>
+<hr>
+<h2 style="text-align: center;"> Featured Engagements </h2>
+
+
+<div style="display:flex;" id="principal1">
+
+<div class="colunas" id="colum1">
+<h3 style="font-size: 40px;"> Google  </h3>
+	<p> Our embedded partnership with Google is as deep as it gets </p>
+</div>
+
+
+<div class="colunas" id="colum2">
+<h3 style="font-size: 40px;"> KFC </h3>
+	<p> Bringing KFC`s brand story to life while ir easier for costomers to buy chicken </p>
+</div>
+
+
+<div class="colunas" id="colum3">
+<h3 style="font-size: 40px;"> Wilson  </h3>
+	<p> A reimagining of Wilson's brand visual identity and brand campaign to support a new product. </p>
+</div>
+<button class="botao-colunas" 
+onclick="mudar1()" id="obj1"> > </button>
+</div>
+
+
+
+
+<div style="display:flex;" id="principal2">
+
+
+<div class="colunas" id="colum4" style="display:none;">
+<h3 style="font-size: 40px;"> Apple  </h3>
+	<p> Our biggest company partner, where you can have a huge choice in products   </p>
+</div>
+
+
+<div class="colunas" id="colum5" style="display:none;">
+<h3 style="font-size: 40px;"> NiKE </h3>
+	<p> Where you can found the best shoes in any sides, colors, to run, to just walk etc </p>
+</div>
+
+
+<div class="colunas" id="colum6" style="display:none;">
+<h3 style="font-size: 40px;"> Sony  </h3>
+	<p> The biggest company in the console, smartv, headphones etc that you can found in the world</p>
+</div>
+<button class="botao-colunas" onclick="mudar2()" id="obj2" 
+style="display:none;">
+ <
+</button>
+
+</div>
+
+
+<hr>
+<div class="pisos"> 
+<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"
+style="width:20%; height: 10%; display: inline-block;">
+<h2 style="display:inline-block; margin-left:2%;"> Environmental impact at the inaugural anthem awards </h2>
+
+</div>
+<hr>
+<div class="pisos"> 
+	
+<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"
+style="width:20%; height: 10%; display: inline-block;">
+<h2 style="display:inline-block; margin-left: 2%;"> Cowboy and basic recognized across 8 categories </h2>
+
+</div>
+<hr>
+<div class="pisos"> 
+	<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"
+style="width:20%; height: 10%; display: inline-block;">
+<h2 style="display:inline-block;margin-left: 2%;"> Fast co: Basic and KFC team up for digital overhaul </h2>
+
+</div>
+<hr>
+<div class="pisos"> 
+	<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"
+style="width:20%; height: 10%; display: inline-block;">
+<h2 style="display:inline-block;margin-left: 2%;"> Basic and Webex Champion "Hybrid collaboration" as next evolution of workplace culture </h2>
+
+</div>
+<hr>
+<div class="pisos"> 
+	<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"
+style="width:20%; height: 10%; display: inline-block;">
+<h2 style="display:inline-block;margin-left: 2%;"> Basic recognized with 2020 star award for technology</h2>
+
+</div>
+<hr>
+<div class="pisos"> 
+	<img src="https://img.freepik.com/fotos-premium/logotipo-da-bicicleta-de-estrada-em-fundo-escuro-generativo-ai_845977-4377.jpg"
+style="width:20%; height: 10%; display: inline-block;">
+<h2 style="display:inline-block;margin-left: 2%;"> Basic expands the executive team
+ </h2>
+
+</div>
+
+<div class="fim">
+	
+<h1 style="position:absolute; left: 5%; margin-top: 5%; display: inline-block;"> B/D </h1>
+<p style="position: absolute; right: 10%; margin-top:5%;"> We collaborate with ambitious brands and people. Let´s build together.
+	<a href="" style="color:lightblue;"> biz@basicagency.com </a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
