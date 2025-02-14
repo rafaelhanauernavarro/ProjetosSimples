@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Projetos Html Css  </title>
+    <style>
+
+        .caixaPrincipal{
+            width: 800px; 
+            background-color: black;
+            height: 500px;
+            text-align: center;
+        }
+        .caixaAzul{
+            width: 300px;
+            background-color: blue;
+            border-radius: 30px;
+            height: 400px;
+            margin-left: 2px;
+            position: absolute;
+            left: 100px;
+            top: 60px;
+            z-index: 1;
+
+          
+
+        }
+        .caixaBranca{
+            width: 300px;
+            background-color: whitesmoke;
+            border-radius: 30px;
+            height: 400px;
+           
+            position: absolute;
+            left: 350px;
+            top: 60px;
+            z-index: 0.1;
+        }
+        .circulo{
+            background-color: rgba(22, 22, 148, 0.738);
+            border-radius: 100px;
+            width: 70px; 
+            height: 70px;
+            margin-left: 42%;
+
+        
+        }
+
+        .tituloAzul, .numeroAzul, .otimoAzul{
+            color: white;
+            font-size: 40px;
+        }
+        .vermelho, .amarelo, .verde, .azul{
+            background-color: brown;
+            width: 180px;
+            border-radius: 30px;
+            margin-left: 27%;
+            height: 50px;
+            margin-bottom: 7%;
+       
+
+        }
+        label{
+         color: white;
+         float: left;
+         margin-left: 5% ;
+         margin-top: 8%;
+        }
+        .nota{
+            display: inline-block;
+            margin-right: -20px;
+            color: white;
+        }
+
+        .botao{
+            background-color: blue;
+            border-radius: 10px;
+            width: 100px;
+            padding: 2%;
+            color: white;
+
+        }
+
+        .caixaPerfume{
+           
+            width: 800px;
+            height: 500px;
+            background-color: black;
+
+        }
+        .fotoPerfume{
+            width: 300px;
+            height: 400px;
+            position: relative;
+            left: 50px;
+            top: 30px;
+            border-radius: 7px;
+
+        }
+        .textoPerfume{
+            background-color: rgb(27, 13, 106);
+            position: absolute;
+            top: 556px;
+            left: 350px;
+            display: inline-block;
+            width: 300px;
+            height: 400px;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+            color: white;
+        }
+        .tituloPerfume{
+            margin: 8%;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 5px;
+
+
+        }
+        .nomePerfume {
+            font-size: 30px;
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+
+        }
+
+        .sobrePerfume{
+            margin-left: 5%;
+            margin-right: 5%;
+
+        }
+
+        .valorPerfume{
+            margin: 8%;
+            font-size: 40px;
+        }
+        .valorMenorPerfume{
+            position: absolute;
+            right: 50px;
+            top: 230px;
+
+        }
+        .botaoPerfume{
+            background-color: blue;
+            border-radius: 10px;
+            width: 200px;
+            padding: 2%;
+            color: white;
+            height: 60px;
+           margin-top: 2%;
+           margin-left: 10%;
+           border-style: groove;
+
+        }
+
+        .fundoNft{
+           
+            background-color: rgb(11, 11, 74);
+            width: 800px;
+            height: 600px;
+        }
+
+        .caixaNFT{
+            position: absolute;
+            left: 200px;
+            top: 1100px;
+            background-color: rgb(25, 25, 183);
+            width: 300px;
+            height: 480px;
+            border-radius: 15px;
+            color: white;
+
+        }
+
+        .imgNft{
+            width: 250px;
+            height: 250px;
+            margin: 8%;
+            border-radius: 15px;
+
+        }
+        .tituloNft{
+            margin-left: 5%;
+            letter-spacing: 2px;
+        }
+        .textoNft{
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .fotoCapa{
+            background-color: rgb(69, 192, 200);
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            width: 350px;
+            height: 150px;
+            position: absolute;
+            left: 100px;
+            margin-top: 30px;
+           
+           
+        }
+        .fotoPerfil{
+            border-radius: 70px;
+            border-style: solid;
+            border-color: white;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            left: 215px;
+            margin-top: 120px;
+            z-index: 3;
+
+        }
+        .perfilCaixa{
+            background-color: whitesmoke;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            width: 350px;
+            height: 270px;
+            position: absolute;
+            left: 100px;
+            margin-top: 180px;
+        }
+        .numeroPerfil{
+            display: inline-block;
+            margin-left: 25px;
+            margin-right: 25px;
+            padding: 5px;
+            margin-top: -20px;
+           
+        }
+        .caixaSocial{
+            width: 300px;
+            height: 470px;
+            background-color: rgb(61, 63, 62);
+            border-radius: 15px;
+            position: absolute;
+            left: 70px;
+            margin-top: 20px;
+        }
+        .fotoSocial{
+            border-radius: 70px;
+            border-style: solid;
+            border-color: black;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            left: 90px;
+            margin-top: 40px;
+            z-index: 3;
+        }
+        .listaSocial{
+            padding: 5px;
+            background-color: rgb(23, 53, 64);
+            width: 220px;
+            height: 20px;
+            border-radius: 5px;
+            margin-bottom: 2%;
+            list-style-type: none;
+            color: rgb(249, 247, 247);
+
+        }
+        .caixaCarros{
+            background-color: black;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 900px;
+            height: 400px;
+
+        }
+        .colunaCarros{
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px;
+
+        }
+        .botaoCarro{
+            padding: 10px;
+            width: 150px;
+            height: 50px;
+            border-style: none;
+            border-radius: 30px;
+            margin-top: 100px;
+         
+           
+
+        }
+
+        
+
+
+
+
+    </style>
+
+    </head>
+    <body>
+        <div class="caixaPrincipal">
+<div class="caixaAzul">
+    <h3 class="tituloAzul"> Resultado </h3>
+    <div class="circulo">
+    <h3 class="numeroAzul" style="padding: 12%;"> 73 </h3>
+    </div>
+    <h4 class="otimoAzul"> Otimo </h4>
+    <p class="textoAzul" style="color: white; margin-top: -20px;"> 
+        Você obteve uma pontuação maior que 65% das pessoas que fizeram o teste 
+    </p>
+</div>
+
+
+<div class="caixaBranca">
+<h3 style="margin-left: -80px;"> Notas </h3>
+ <div class="vermelho">
+    <label> Reação </label>
+    <p class="nota"> 80/100 </p>
+
+ </div>
+ <div class="amarelo">
+    <label> Memoria </label>
+    <p class="nota"> 92/100 </p>
+
+ </div>
+ <div class="verde">
+    <label> Verbal </label>
+    <p class="nota"> 61/100 </p>
+
+ </div>
+ <div class="azul">
+    <label> Visual </label>
+    <p class="nota"> 73/100 </p>
+
+ </div>
+
+ <button class="botao"> Continuar </button>
+</div>
+</div>
+
+<hr>
+
+
+<div class="caixaPerfume">
+    <img class="fotoPerfume"
+    src="https://static1.sabinacdn.com/49585/eau-de-parfum-vaporizador.jpg" />
+     
+<div class="textoPerfume">
+    <h4 class="tituloPerfume"> Perfume </h4>
+    <h2 class="nomePerfume"> Blue de Channel Eau de Parfum  </h2>
+    <p class="sobrePerfume"> 
+        BLEU DE CHANEL eau de parfum, um aromático-amadeirado com notas ambaradas e almíscaradas.
+    </p>
+<h2 class="valorPerfume"> $89.00 </h2>
+<h5 class="valorMenorPerfume">  <i>($99.00)</i> </h5>
+
+<button class="botaoPerfume"> Adicionar  </button>
+
+</div>
+</div>
+<hr><br>
+
+<div class="fundoNft">
+<div class="caixaNFT">
+<img class="imgNft"  src="https://static1.sabinacdn.com/49585/eau-de-parfum-vaporizador.jpg"/>
+
+<h2 class="tituloNft"> Equilibrium  </h2>
+<p class="textoNft">
+Our Equilibrium collection promotes balance and calm.
+</p>
+<hr style="margin-left: 5%; margin-right: 5%;"> 
+<i style="float: right; margin-top: 2%; margin-right: 5%;"> Creation of Jules </i>
+
+</div>
+</div>
+<hr>
+
+<div class="caixaPrincipal">
+<div class="fotoCapa">
+
+</div>
+<img  src="https://static1.sabinacdn.com/49585/eau-de-parfum-vaporizador.jpg"
+ class="fotoPerfil"/>
+<div class="perfilCaixa">
+    <h2 style="margin-top: 70px;"> Victor 
+         <i style="margin-left: 10px;"> 26 </i> </h2> 
+    <p style="font-size: 20px;"> Londres </p>
+<hr style="margin: 5%;">
+
+
+<div class="numeroPerfil">
+    <h4>80K</h4>
+    <p> Seguidores </p>
+</div>
+<div class="numeroPerfil" style="margin-right: 38px;">
+    <h4>803K</h4>
+    <p> Likes </p>
+</div>
+<div class="numeroPerfil">
+    <h4>1.4k</h4>
+    <p> Fotos </p>
+</div>
+</div>
+</div>
+
+<hr>
+
+<div class="caixaPrincipal">
+    <div class="caixaSocial">
+        <img  src="https://static1.sabinacdn.com/49585/eau-de-parfum-vaporizador.jpg"
+ class="fotoSocial"/>
+ <h2 style="margin-top: 165px;"> Rafael Hanauer </h2>
+ <h4 style="color: rgb(94, 128, 43); margin-top: -10px;"> Lisboa, Portugal </h4>
+ <h3 style="margin-top: -5px;"> Front-end developer </h3>
+
+<ul>
+    <li class="listaSocial"><a href="https://github.com/rafaelhanauernavarro" target="_blank"> Github </a></li>
+    <li class="listaSocial"><a href="https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-" target="_blank"> Frontend Mentor </a> </li>
+    <li class="listaSocial"><a href="https://www.linkedin.com/in/rafael-hanauer-1356b0268/" target="_blank"> Linkedin </a> </li>
+    <li class="listaSocial"><a href="https://www.instagram.com/rafael_hanauerr/" target="_blank"> Instagram </a></li>
+    <li class="listaSocial"><a href="https://www.facebook.com/rafael.navarro.16/?locale=pt_BR" target="_blank"> Facebook </a></li>
+</ul>
+    </div>
+</div>
+<hr>
+<div class="caixaCarros">
+<div class="colunaCarros" style="background-color: rgb(164, 118, 32);">
+   <h1>Sedans </h1>
+   <p> Choose a sedan for it`s excellent fuel economy, 
+    ideal for cruising in the city or an your nexr road trip
+    </p>
+    <button class="botaoCarro" style="color: rgb(164, 118, 32);;">Learn More </button>
+</div>
+<div class="colunaCarros" style="background-color: rgb(67, 67, 136);">
+    <h1 > SUV`s </h1>
+    <p > Take an SUV for it`s spacious interior, power and versality.
+         Perfect for your next family vacation.
+    </p>
+    <button class="botaoCarro" style="color: rgb(42, 42, 73);;">Learn More </button>
+</div>
+<div class="colunaCarros" style="background-color: rgb(32, 98, 32);">
+    <h1> Luxury </h1>
+    <p> Drive the best brands without and enjoy the comfort 
+        of a luxury car and arrive in style 
+    </p>
+    <button class="botaoCarro" style="color: rgb(32, 98, 32);;">Learn More </button>
+</div>
+
+
+
+</div>
+
+</body>
+</html>

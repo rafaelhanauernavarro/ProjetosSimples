@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Projetos Javascript  </title>
+
+<script>
+
+	 function acres(valor) {
+    document.getElementById('display').value += valor;
+  }
+
+  function zerarcal() {
+    document.getElementById('display').value = '';
+  }
+
+  function calcular() {
+    let display = document.getElementById('display').value;
+    let result = eval(display);
+    document.getElementById('display').value = result;
+  }
+
+  function aleatorio(){
+    let alea1 = Math.floor(Math.random() * 100) + 1;
+    let alea2 = Math.floor(Math.random() * 1000) + 1;
+    let alea3 = Math.floor(Math.random() * 10000) + 1;
+    document.getElementById("numAle1").innerHTML = alea1;
+    document.getElementById("numAle2").innerHTML = alea2;
+    document.getElementById("numAle3").innerHTML = alea3;
+  }
+
+  function votar() {
+  let idade = document.getElementById("idadeVoto").value;
+  let vota = (idade < 18) ? "Menor de idade":"Maior de idade";
+  document.getElementById("textoVoto").innerHTML = vota + " para votar.";
+}
+
+function horaDia() {
+    let hora = document.getElementById("hora").value;
+    let textoHora = "";
+   if (hora < 6){
+  textoHora = "Madrugada";
+} else if (hora >= 6 && hora <= 12) {
+  textoHora = "Bom dia ";
+} else if (hora <= 18) {
+  textoHora = "Boa tarde";
+} else if (hora <= 24) {
+  textoHora = "Boa noite";
+} else {
+  textoHora = "Erro";
+}
+ return document.getElementById("textoDia").innerHTML = textoHora;
+
+}
+
+function maiorMenor(){
+       let maiorMenor = document.getElementById("deMaiorMenor").value;
+
+       let Texto1 = maiorMenor >= 18 ? "Maior de idade" : "Menor de idade";
+       return document.getElementById("textoMaiorMenor").innerHTML = Texto1; 
+}
+
+function prof() {
+
+
+let trabalho = document.getElementById("profi").value;
+let textotrabalho;
+switch(trabalho){
+   case "Software developer":
+    textotrabalho = "Desenvolve programas";
+    break;
+
+  case "Designer":
+  textotrabalho = "Desenvolve layouts";
+    break;
+
+  case "Analista de dados":
+  textotrabalho = "Estuda dados";
+    break;
+
+  case "Mobile developer":
+    textotrabalho = "Cria aplicativos de celular";
+    break;
+  
+  case "Cybersecurity":
+    textotrabalho = "Desenvolve uma segurança cibernética";
+    break;
+
+  default:
+  textotrabalho = "Não encontrado";
+
+};
+return document.getElementById("textoProfi").innerHTML = textotrabalho;
+};
+
+let textoMetodo = "Rafael Hanauer Navarro";
+let numeroMetodo = "123-456-789";
+let emailMetodo = "rafael@gmail.com";
+
+console.log(textoMetodo.charAt(0));
+console.log(textoMetodo.indexOf("H"));
+console.log(textoMetodo.lastIndexOf("a"));
+console.log(textoMetodo.length);
+console.log([...textoMetodo]);
+console.log(textoMetodo.toUpperCase());
+console.log(textoMetodo.toLowerCase());
+console.log(textoMetodo.repeat(2));
+console.log(textoMetodo.startsWith("R"));
+console.log(textoMetodo.startsWith("K"));
+console.log(textoMetodo.slice(0, 6));
+console.log(textoMetodo.slice(7, 14));
+console.log(textoMetodo.slice(15, 23));
+console.log(numeroMetodo.replaceAll("-", "/"));
+console.log(emailMetodo.slice(0, emailMetodo.indexOf("@")));
+console.log(emailMetodo.slice(emailMetodo.indexOf("@")+ 1 ));
+console.log("     ");
+
+let i = 0;
+while (i < 3) {
+  textoWhile = "Número é " + i;
+  i++;
+  console.log(textoWhile);
+
+}
+
+console.log(" ");
+
+for (let d = 0; d < 5; d++) {
+  if(d == 3){
+    continue;
+  }
+ console.log(d);
+}
+
+function converterTemp(){
+  
+
+    let valorTemp = Number(document.getElementById("valorTemp").value);
+   let paraFahren = document.getElementById("paraFahren");
+   let paraCelsius = document.getElementById("paraCelsius");
+   let resulTemp = document.getElementById("resulTemp");
+   let temp = 0;
+   console.log(typeof(valorTemp));
+
+  if(paraFahren.checked){
+ 
+    temp = valorTemp * 9 / 5 + 32;
+   resulTemp.textContent = temp + " fahrenheit";
+
+    }
+  else if(paraCelsius.checked){
+  
+   temp = (valorTemp - 32) * (5/9);
+   resulTemp.textContent = temp.toFixed(2) + " celsius";
+
+   }
+   else{
+    resulTemp.textContent = "Escolha uma medida de temperatura";
+   }
+
+}
+
+function limparTemp(){
+  return document.getElementById("valorTemp").value = "", 
+  document.getElementById("resulTemp").innerHTML = "";
+}
+ 
+
+
+let frutas = ["maçã", "laranja", "banana", "pera"];
+frutas[0] = "abacate";
+console.log(frutas);
+console.log(frutas.indexOf("banana"));
+
+for(let f = 0; f < frutas.length; f++){
+  console.log(frutas[f]);
+}
+
+frutas.forEach(mostrar);
+function mostrar(elemento){
+  console.log(elemento + " foreach");
+}
+
+console.log(frutas.sort().reverse());
+
+let numerosArray = [1, 2, 3 , 4, 5, 6, 7, 12 , 23, 45, 63, 76, 243, 2004, 34044];
+console.log(numerosArray);
+console.log(Math.max(...numerosArray));
+console.log(Math.min(...numerosArray));
+
+console.log(numerosArray.reduce(soma) + " Soma dos numeros");
+function soma(totalArray, elemen){
+  return totalArray + elemen;
+}
+
+console.log(numerosArray.filter(pares));
+function pares(element){
+  return element % 2 === 0;
+}
+console.log(numerosArray.filter(impar));
+function impar(element){
+  return element % 2 !== 0;
+}
+
+
+function calcularImc(){
+  let peso = document.getElementById("pesoImc").value;
+    let altura = document.getElementById("alturaImc").value;
+     let resul = Math.round(peso / Math.pow(altura, 2), 4);
+    
+
+
+     if (resul <= 20){
+      text = "Magreza";
+     }
+     else if (resul > 20 && resul <= 30){
+      text = "Normal";
+     }
+     else if(resul > 30 && resul <= 45){
+      text = "Obeso";
+     }
+     else {
+      text = "Erro";
+     }
+    let texto = " seu IMC é: " + resul + " és considerado " + text;
+
+
+    document.getElementById("resultadoImc").innerHTML = texto;
+  }
+  
+function texto() {
+		
+    let nome = document.getElementById("Nome").value;
+    let idade = document.getElementById("Idade").value;
+    let curso = document.getElementById("Curso").value;
+    let linguas = document.getElementById("Linguas").value;
+    let trabalho = document.getElementById("Trabalho").value;
+
+    let x = "Nome: " + nome + "<br>"  + "Idade: " + idade + 
+    "<br>" + "Curso: " + curso + "<br>" + "Linguas: " + linguas + 
+    "<br>" + "Trabalho: " + trabalho;
+
+    return document.getElementById("textoFinal").innerHTML = x;
+    };
+    
+    
+function pode() {
+            let anos = document.getElementById("Idade").value;
+            let devolve;
+    
+            if (anos<18){ devolve = "Não pode votar";}
+            else if (anos<70){devolve = "Pode votar";}
+            else {devolve="muito velho";}
+          
+    
+            return document.getElementById("fdsa").innerHTML = devolve;
+    
+        };
+
+function mostrarExemplo() {
+  const pessoa = {
+  nome: "Rafael",
+  idade: 22,
+  curso: "Web Developerment",
+  trabalho: "Bartender",
+  linguas: "português, inglês e francês"
+
+};
+
+return document.getElementById("exemplo").innerHTML = 
+pessoa.nome + " que tem "  + pessoa.idade + " anos, estuda " +  pessoa.curso + ", trabalha como " + pessoa.trabalho + "  e fala: " + pessoa.linguas + "." ;}
+
+
+function limparForm(){
+  return document.getElementById("Nome").value = "",
+ document.getElementById("Idade").value = "",
+ document.getElementById("Curso").value = "",
+ document.getElementById("Linguas").value = "", 
+ document.getElementById("Trabalho").value = "",
+ document.getElementById("textoFinal").innerHTML = "", 
+ document.getElementById("fdsa").innerHTML = "", 
+ document.getElementById("exemplo").innerHTML = "";
+
+
+}
+
+function papel (){
+	let computador = Math.random();
+	let devolve;
+  if (computador < 0.3 ){devolve = "empatado";}
+	else if (computador > 0.3 && computador < 0.7){devolve = "voce ganhou";}
+	else {devolve = "voce perdeu ";}
+ return document.getElementById("resultado").innerHTML = devolve;}
+
+function pedra (){
+		let computador = Math.random();
+		let devolve;
+		if (computador < 0.3 ){devolve = "voce perdeu";}
+	else if (computador > 0.3 && computador < 0.7){devolve = "empate";}
+	else {devolve = "voce ganhou";}
+return document.getElementById("resultado").innerHTML = devolve 
+	}
+	function tesoura (){
+		let computador = Math.random();
+		let devolve;
+		if (computador < 0.3 ){devolve = "voce ganhou";}
+		else if (computador > 0.3 && computador < 0.7){devolve = "voce perdeu";}
+		else {devolve = "empate";}
+return document.getElementById("resultado").innerHTML = devolve;
+	}
+
+function putcar(){
+        let batata = document.getElementById('batata1').value;
+        let nacho = document.getElementById('nacho1').value;
+        let pipoca = document.getElementById('pipoca1').value;
+        let noze = document.getElementById('noze1').value;
+        let pizza = document.getElementById('pizza1').value;
+        let hamburguer = document.getElementById('hamburguer1').value;
+        let kebab = document.getElementById('kebab1').value;
+        let risoto = document.getElementById('risoto1').value;
+        let tiramisu = document.getElementById('tiramisu1').value;
+        let petit = document.getElementById('petit1').value;
+        let tarte = document.getElementById('tarte1').value;
+        let anana = document.getElementById('anana1').value;
+        let cola = document.getElementById('cola1').value;
+        let cerveja = document.getElementById('cerveja1').value;
+        let agua = document.getElementById('agua1').value;
+        let cha = document.getElementById('cha1').value;
+
+        console.log(batata, nacho, pipoca, noze, pizza, hamburguer, 
+        kebab, risoto, tiramisu,  petit, 
+        tarte, anana, cola, cerveja, agua, cha);
+
+        let valor = (batata * 9.5) + (nacho * 7) + (pipoca * 5.5) 
+        + (noze * 3) + (pizza * 15) + (hamburguer * 13.5) + (kebab * 7)
+        + (risoto * 15) + (tiramisu * 7.5) + (petit * 8) + (tarte * 8)
+        + (anana * 5) + (cola * 2) + (cerveja * 4.5) + (agua * 1) +
+        (cha * 2);
+
+
+        document.getElementById("conta").value = valor;
+    }
+function submeterContato(){
+let nomeCont = document.getElementById("primeiroNome").value;
+let familiaCont = document.getElementById("segundoNome").value;
+let emailCont = document.getElementById("emailContato").value;
+let mensagemCont = document.getElementById("mensagemContato").value;
+let checkCont = document.getElementById("checkContato").checked;
+
+if(nomeCont.length < 3 | nomeCont.length > 20){
+  console.log("erro");
+}
+
+if(familiaCont.length < 3 | familiaCont.length > 20){
+  console.log("erro");
+}
+if(emailCont.includes("@") && emailCont.includes(".com")){
+  console.log("tem @ e .com");
+}
+
+console.log(checkCont);
+
+
+}
+
+</script>
+<style >
+	.calculadora {margin: 5%; font-size: 2.5rem; 
+    background-color: black; width: 17%; padding: 2%; text-align: center; 
+  border-radius: 10px;  }
+  .btncalcu { border-style: none; padding: 6%; border-radius: 10px;
+    background-color: aqua;
+  }
+
+  #idadeVoto, #textoVoto , #hora , #textoDia{margin-left: 5%;}
+
+  input{margin-left:2%;margin-top: 3px;}
+  h4{margin-left: 4%;}
+  button{display: inline-block;}
+
+ #Bloco{background-color: grey; border-radius: 5px; 
+padding: 3%; margin: 5%;}
+ #Nome, #Idade, #Curso, #Trabalho, #Linguas{
+width: 200px; text-align: center; border-radius: 5px; border-style: none;
+position:center;
+ }
+ .caixaMercado{
+  background-color: grey; border-radius: 20px; width: 20%; 
+    height: 25%; display:inline-block; margin-left: 3%; margin-top:2%; text-align: center; 
+ }
+ img{
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 10px;
+ }
+.formContato{
+   background-color: rgba(184, 171, 171, 0.842);
+   position: absolute;
+   width: 200px;
+   height: 250px;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+</style>
+</head>
+<body>
+	<div class="calculadora">
+  <input  type="text" id="display" 
+  disabled 
+  style="border-style: solid; background-color: aliceblue; border-radius: 5px; height: 30px; "/><br>
+  <input type="button" value="1" onclick="acres('1')" class="btncalcu">
+  <input type="button" value="2" onclick="acres('2')" class="btncalcu">
+  <input type="button" value="3" onclick="acres('3')" class="btncalcu">
+  <input type="button" value="+" onclick="acres('+')" class="btncalcu"><br>
+  <input type="button" value="4" onclick="acres('4')" class="btncalcu">
+  <input type="button" value="5" onclick="acres('5')" class="btncalcu">
+  <input type="button" value="6" onclick="acres('6')" class="btncalcu">
+  <input type="button" value="-" onclick="acres('-')" class="btncalcu"><br>
+  <input type="button" value="7" onclick="acres('7')" class="btncalcu">
+  <input type="button" value="8" onclick="acres('8')" class="btncalcu">
+  <input type="button" value="9" onclick="acres('9')" class="btncalcu">
+  <input type="button" value="*" onclick="acres('*')" class="btncalcu"><br>
+  <input type="button" value="C" onclick="zerarcal()" class="btncalcu">
+  <input type="button" value="0" onclick="acres('0')" class="btncalcu">
+  <input type="button" value="=" onclick="calcular()" class="btncalcu">
+  <input type="button" value="/" onclick="acres('/')" class="btncalcu">
+</div>
+<hr>
+
+<h2 id="numAle1" style="margin-left: 8%; display: inline-block;"> 0 </h2>
+<h2 id="numAle2" style="margin-left: 8%; display: inline-block;"> 0 </h2>
+<h2 id="numAle3" style="margin-left: 8%; display: inline-block;"> 0 </h2>
+<button onclick="aleatorio()" style="margin-left: 3%;"> Números aleatórios entre 0 e 10000 </button>
+<button style="margin-left: 2%; " 
+onclick="
+document.getElementById('numAle1').innerHTML='0'
+document.getElementById('numAle2').innerHTML='0'
+document.getElementById('numAle3').innerHTML='0'"> Zerar </button>
+
+<hr>
+
+<button style="margin-left: 4%; margin-top: 2%;" onclick="document.getElementById('tt').innerHTML=Date()"> Hora Atual</button>
+<button style="margin-left: 2%; margin-top: 2%;" onclick="document.getElementById('tt').innerHTML='' "> Limpar </button>
+
+<h4 id="tt"></h4>
+
+<hr>
+<input type="number" placeholder="Sua Idade" id="idadeVoto" onchange="votar()">
+
+<button style="margin-left: 2%;" 
+onclick="document.getElementById('textoVoto').innerHTML='', 
+ document.getElementById('idadeVoto').value =''"> Limpar </button>
+<h4 id="textoVoto"></h4>
+
+<hr>
+
+ <input type="number" placeholder="Hora do dia" id="hora" onchange="horaDia()">
+ <button style="margin-left: 2%; " onclick="document.getElementById('textoDia').innerHTML='', 
+ document.getElementById('hora').value ='' "> Limpar </button>
+ <h4 id="textoDia"> </h4>
+
+ <hr>
+
+ <input type="number" placeholder="Sua idade" id="deMaiorMenor" onchange="maiorMenor()">
+ <button style="margin-left: 2%; " onclick="document.getElementById('textoMaiorMenor').innerHTML='', 
+ document.getElementById('deMaiorMenor').value ='' "> Limpar </button>
+ <h4 id="textoMaiorMenor"> </h4>
+
+<hr> 
+
+<input type="text" placeholder="Sua area de trabalho" id="profi" onchange="prof()">
+<button  onclick="document.getElementById('textoProfi').innerHTML='', 
+ document.getElementById('profi').value ='' "> Limpar </button>
+<h4 id="textoProfi"> </h4>
+
+<hr>
+
+
+  <h2> Converter temperatura </h2>
+  <input type="number" id="valorTemp"  >
+
+  <input type="radio" id="paraFahren" name="kk">
+  <label> Celsius para Fahrenheit </label>
+
+  <input type="radio" id="paraCelsius" name="kk">
+  <label> Fahrenheit para Celsius </label>
+
+  <button  onclick="converterTemp()" > Converter </button>
+  <button onclick="limparTemp()"> Limpar </button>
+  <p id="resulTemp" style="margin-left: 4%;"> </p>
+
+<hr>
+
+  <input type="number" placeholder="Peso em KG" id="pesoImc"> 
+  <input type="number" placeholder="Altura em Metro.centímetro" id="alturaImc">
+  <button onclick="calcularImc()">Calcular IMC</button>
+  <button  onclick="
+  document.getElementById('pesoImc').value='', 
+ document.getElementById('alturaImc').value ='',
+ document.getElementById('resultadoImc').innerHTML='' "> Limpar </button>
+
+  <h4 id="resultadoImc"></h4>
+    
+<hr>
+
+<div id="Bloco">
+  <h1 style="text-align:center;"> Formulário </h1>
+  <input type="text" name="" id="Nome" placeholder="Nome Completo"> 
+  <input type="number" name="" id="Idade" placeholder="Idade">  
+  <input type="text" name="" id="Curso" placeholder="Curso"> 
+  <input type="text" name="" id="Trabalho" placeholder="Trabalho"> 
+  <input type="text" name="" id="Linguas" placeholder="Linguas">  
+      <br>
+<button onclick="texto()" style="margin-top: 2%;" > Executar seus Dados </button>
+<P id="textoFinal"> </p>
+<button onclick="pode()"> Pode ou não votar? </button>
+<p id="fdsa"></p>
+<button onclick="mostrarExemplo()"> Mostrar exemplo </button>
+<p id="exemplo" style="color: black;"></p> <br>
+<button onclick="limparForm()"> Limpar </button>
+
+</div>
+<hr>
+
+<button onclick="papel()" style="margin-left: 5%;"> Papel </button>
+<button onclick="pedra()" > Pedra </button>
+<button onclick="tesoura()"> Tesoura </button>
+<h2 id="resultado"> </h2>
+
+<hr>
+
+<h1 style="text-align: center;"> Mercado Online </h1>
+<br>
+
+<div class="caixaMercado"> 
+<img src="https://static.itdg.com.br/images/1200-630/150ba2d5d2874bed8561dd8edbdc1323/164773-original.jpg" />
+ <h3> Batata Frita </h3> 
+ <p> Preço: 9.5$ </p>
+ <input type="number" name="quantidade" id="batata1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> 
+  <img src="https://www.receiteria.com.br/wp-content/uploads/nachos-caseiros-capa.jpeg"/>
+ <h3> Nachos </h3> 
+ <p> Preço: 7$ </p>
+ <input type="number" name="quantidade" id="nacho1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> 
+  <img src="https://www.receiteria.com.br/wp-content/uploads/pipoca-no-micro-ondas.jpeg"/>
+ <h3> Pipoca </h3> 
+ <p> Preço: 5.5$ </p>
+ <input type="number" name="quantidade" id="pipoca1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> 
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHjfqOkS-EhTMrinAENCt3eIuM9T_xJk_YSA&s" />
+ <h3> Nozes </h3> 
+ <p>  Preço: 3$ </p>
+ <input type="number" name="quantidade" id="noze1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> 
+  <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/31/86/89/margherita-dop.jpg?w=600&h=-1&s=1" />
+ <h3> Pizza </h3> 
+ <p> Preço: 15$ </p>
+ <input type="number" name="quantidade" id="pizza1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> 
+  <img src="https://static.itdg.com.br/images/360-240/49687a8a7a7110c7f560b9c7e96a9d0e/254679-shutterstock-364110890-1-.jpg" />
+ <h3> Hamburguer </h3> 
+ <p> Preço: 13.5$ </p>
+ <input type="number" name="quantidade" id="hamburguer1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> 
+  <img src="https://www.alibabakebabhaus.com//wp-content/uploads/2019/08/kebab-slider-mobile.jpg"/>
+ <h3> Kebab </h3> 
+ <p> Preço: 7$ </p>
+ <input type="number" name="quantidade" id="kebab1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://www.receiteria.com.br/wp-content/uploads/risoto-de-camarao-14.jpg" />
+ <h3> Risoto </h3> 
+ <p> Preço: 15$ </p>
+ <input type="number" name="quantidade" id="risoto1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://docerar.pt/wp-content/uploads/2020/02/tiramisu.jpg"/>
+ <h3> Tiramisú </h3> 
+ <p> Preço: 7.5$ </p>
+ <input type="number" name="quantidade" id="tiramisu1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://receitatodahora.com.br/wp-content/uploads/2022/02/petit-gateau-scaled.jpg"/>
+ <h3> Petit gateau </h3> 
+ <p> Preço: 8$ </p>
+ <input type="number" name="quantidade" id="petit1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4H-1_NDKEzQD5WyHPp3k0CCGebuHYB1INVQ&s"/>
+ <h3> Tarte de Limão </h3> 
+ <p> Preço: 8$ </p>
+ <input type="number" name="quantidade" id="tarte1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://www.vip.pt/wp-content/uploads/2021/11/vip-pt-41088-noticia-saude-e-beleza-7-bons-motivos-para-comer-duas-fatias-de-abacaxi-por-dia1636468004.jpg" />
+ <h3> Ananas </h3> 
+ <p> Preço: 5$ </p>
+ <input type="number" name="quantidade" id="anana1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://cdn.shopk.it/usercontent/aminhamercearia/media/images/d0769cf-171414-coca-cola-033cl.jpg" />
+ <h3> Coca Cola </h3> 
+ <p> preço: 2$ </p>
+ <input type="number" name="quantidade" id="cola1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://capitaobarley.com.br/wp-content/uploads/2020/03/cervejaartesanal_.jpg" />
+ <h3> Cerveja </h3> 
+ <p> Preço: 4.5$ </p>
+ <input type="number" name="quantidade" id="cerveja1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://www.fusati.com.br/wp-content/uploads/2021/05/O-Que-e-agua-Mineral.jpeg" />
+ <h3> Água </h3> 
+ <p> Preço: 1$ </p>
+ <input type="number" name="quantidade" id="agua1" placeholder="quantidade">
+ </div>
+
+ <div class="caixaMercado"> <img src="https://ciclovivo.com.br/wp-content/uploads/2021/05/plantas-Brasil-cha-1024x714.jpg"/>
+ <h3> Chá </h3> 
+ <p> Preço: 2$ </p>
+ <input type="number" name="quantidade" id="cha1" placeholder="quantidade">
+ </div>
+ 
+
+ <button onclick="putcar()" style="margin-top: 10px;"> calcular </button>
+ <input type="number" id="conta" disabled>
+ 
+<hr>
+<br>
+
+<div class="formContato">
+<input type="text" id="primeiroNome" placeholder="Primeiro Nome">
+<input type="text" id="segundoNome" placeholder="Nome de Família">
+<input type="email" id="emailContato" placeholder="E-mail">
+<input type="mensagemContato" id="mensagemContato" placeholder="Mensagem"
+style="height: 50px;"><br>
+<input type="checkbox" id="checkContato"> <label>Concordo </label><br>
+<button onclick="submeterContato()"> Enviar </button>
+
+</div>
+
+</body>
+</html>
